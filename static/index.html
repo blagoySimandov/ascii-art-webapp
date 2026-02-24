@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CONVERT TO ASCII</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>IMAGE // ASCII</h1>
+            <p class="subtitle">CONVERT TO PURE TEXT ART</p>
+        </header>
+
+        <main>
+            <div id="drop-zone" class="drop-zone">
+                <p>DRAG IMAGE HERE</p>
+                <span class="or">OR</span>
+                <input type="file" id="file-input" accept="image/png, image/jpeg, image/gif" hidden>
+                <button id="browse-btn" class="brutal-btn">BROWSE</button>
+            </div>
+
+            <div id="test-images" class="test-images">
+                <p>OR TRY A TEST IMAGE</p>
+                <div class="test-image-grid">
+                    <img src="/test1.jpg" alt="Test 1" class="test-image">
+                    <img src="/test2.jpg" alt="Test 2" class="test-image">
+                    <img src="/test3.jpg" alt="Test 3" class="test-image">
+                    <img src="/test4.jpg" alt="Test 4" class="test-image">
+                </div>
+            </div>
+
+            <div id="loading" class="hidden brutal-banner">
+                <p>PROCESSING // WAIT</p>
+            </div>
+
+            <div id="error" class="hidden brutal-banner error-banner">
+                <p id="error-message">ERROR</p>
+            </div>
+
+            <div id="result-container" class="hidden">
+                <div class="actions">
+                    <button id="save-btn" class="brutal-btn action-btn">SAVE AS PNG</button>
+                    <button id="reset-btn" class="brutal-btn action-btn outline">AGAIN</button>
+                    <div class="zoom-controls">
+                        <button id="zoom-out-btn" class="brutal-btn zoom-btn">-</button>
+                        <span class="zoom-label">ZOOM</span>
+                        <button id="zoom-in-btn" class="brutal-btn zoom-btn">+</button>
+                    </div>
+                </div>
+                <div class="ascii-wrapper">
+                    <pre id="ascii-output"></pre>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <div class="footer-content">
+                <span class="created-by">Created by Blagoy Simandov</span>
+                <div class="footer-links">
+                    <a href="https://github.com/blagoySimandov" target="_blank" rel="noopener noreferrer"
+                        class="social-link">
+                        <svg height="16" width="16" viewBox="0 0 16 16" fill="currentColor">
+                            <path
+                                d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z">
+                            </path>
+                        </svg>
+                        blagoySimandov
+                    </a>
+                    <span class="separator">|</span>
+                    <a href="https://simandoff.blog" target="_blank" rel="noopener noreferrer" class="social-link">
+                        simandoff.blog
+                    </a>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script src="/script.js"></script>
+</body>
+
+</html>
