@@ -3,8 +3,8 @@
 The web application is a simple image to ASCII-ART converter.
 
 <div style="display: flex; gap: 30px">
-    <img src="./web-ui1.png" alt="Drag and Drop UI" width="300" height="350"/>
-    <img src="./web-ui2.png" alt="Ascii art preview + download button zoomed out" width="600" height="350"/>
+    <img src="./web-ui1.png" alt="Drag and Drop UI" width="300" height="340"/>
+    <img src="./web-ui2.png" alt="Ascii art preview + download button zoomed out" width="600" height="340"/>
 </div>
 
 Zooming in on the web preview will allow you to see the individual characters of the image.
@@ -19,8 +19,9 @@ Why do we use a "weighted average" instead of just taking the average of the RGB
 
 Then we use a hardcoded array with the ASCII-ART characters ordered by their "thickness" (the thicker it is the "whiter" the character will appear) and for each grayscale value we find the corresponding character index by normalising the 0–255 value to the range of the array.
 
-```
-var Chars = strings.Split("`^\",:;Il!i~+_-?][}{1)(|\\/tfjrxnuvczXYUJCLQ0OZmwqpdbkhao*#MW&8%B@$", "")
+```go
+strings.Split("`^\",:;Il!i~+\_-?][}{1)(|\\/tfjrxnu
+    vczXYUJCLQ0OZmwqpdbkhao\*#MW&8%B@$", "")
 ```
 
 ## The Tech Used
