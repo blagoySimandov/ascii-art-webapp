@@ -306,6 +306,13 @@ footer {
     color: var(--fg);
 }
 
+.student-id {
+    font-size: 0.85em;
+    color: #94a3b8;
+    font-weight: 400;
+    margin-left: 0.4rem;
+}
+
 .footer-links {
     display: flex;
     align-items: center;

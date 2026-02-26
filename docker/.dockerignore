@@ -1,0 +1,6 @@
+.git
+.gitignore
+*.md
+Dockerfile
+make_image.go
+node_modules
