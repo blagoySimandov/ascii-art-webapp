@@ -10,7 +10,7 @@ Run `make help` for a list of available commands
 
 The simplest way to start it up is to either:
 
-1. Run `make deploy` (this command is idempotent)
-1. Run `./deploy.sh` for full deployment workflow.
+1. Run `make tf-apply`, `make helm-install` and `make helm-forward`
+1. Run `./deploy.sh` for full the full deployment workflow.
 
 The web application will then be available at `http://localhost:8080`.

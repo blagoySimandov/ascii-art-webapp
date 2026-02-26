@@ -47,7 +47,7 @@ func getPixels(file io.Reader, size uint) ([][]int, error) {
 	origH := float64(origBounds.Dy())
 
 	// Characters in monospace fonts are typically about twice as tall as they are wide.
-	// We multiply the height by ~0.45 to squash the image so that when it is
+	// We multiply the height by 0.45 to squash the image so that when it is
 	// rendered as text, it stretches back out to the correct proportions.
 	ratio := origH / origW
 	adjustedHeight := uint(float64(size) * ratio * 0.45)
@@ -69,5 +69,9 @@ func getPixels(file io.Reader, size uint) ([][]int, error) {
 }
 
 func rgbaToGrayscale(r, g, b, _ uint32) int {
-	return (int(r>>8) + int(g>>8) + int(b>>8)) / 3
+	// this is just the average but it's weighted.
+	// human eyes are more sensitive to green than red or blue.
+	// it's called the Luminosity method
+	// for more info: https://www.johndcook.com/blog/2009/08/24/algorithms-convert-color-grayscale/
+	return int(0.299*float64(r>>8) + 0.587*float64(g>>8) + 0.114*float64(b>>8))
 }
