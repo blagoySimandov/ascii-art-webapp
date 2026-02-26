@@ -2,7 +2,8 @@ TF_DIR = terraform
 HELM_DIR = helm/img-ascii
 DOCKER_DIR = docker
 HELM_RELEASE = img-ascii
-DOCKER_IMAGE = bsimandoff/img-ascii
+DOCKER_REPO = bsimandoff
+DOCKER_IMAGE = $(DOCKER_REPO)/img-ascii
 DOCKER_TAG = latest
 
 ##@ Docker commands
